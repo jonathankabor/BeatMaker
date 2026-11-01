@@ -26,7 +26,8 @@ class MainWidget(RelativeLayout):
     
     def on_parent(self, widget, parent):
         for i in range(0, self.sound_kit_service.get_nb_tracks()):
-            self.tracks_layout.add_widget(TrackWidget())
+            sound = self.sound_kit_service.get_sound_at(i)
+            self.tracks_layout.add_widget(TrackWidget(sound=sound))
 
 class BeatMakerApp(App):
     pass
