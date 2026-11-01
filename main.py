@@ -7,6 +7,9 @@ from track import TrackWidget
 
 
 
+
+
+
 Builder.load_file('track.kv')
 
 
@@ -15,6 +18,10 @@ NB_TRACKS = 4
 class MainWidget(RelativeLayout):
     tracks_layout = ObjectProperty()
     
+    
+    def __init__(self, **kwargs):
+        super(MainWidget, self).__init__(**kwargs)
+        #self.sound_kit_service = SoundKitService()
     
     def on_parent(self, widget, parent):
         for i in range(0, NB_TRACKS):
