@@ -1,4 +1,8 @@
+import sys
+sys.path.append(r"C:\Users\Hp\BeatMaker\audiostream\audiostream\core")
 from audiostream.core import get_output
+from audio_source_one_shot import AudioSourceOneShot
+
 
 
 class AudioEngine:
@@ -11,3 +15,8 @@ class AudioEngine:
         self.output_stream = get_output(channels=self.NB_CHANNELS,  
                             rate=self.SAMPLE_RATE, 
                             buffersize=self.BUFFER_SIZE)
+        
+        
+        def play_sound(self, wav_samples):
+            audio_source = AudioSourceOneShot(self.output_stream, wav_samples)
+            audio_source.start()
