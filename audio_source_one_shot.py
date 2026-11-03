@@ -1,6 +1,6 @@
 from array import array
 
-from audiostream.sources.thread import ThreadSource
+from audiostream.audiostream.sources.thread import ThreadSource
 
 
 class AudioSourceOneShot(ThreadSource):

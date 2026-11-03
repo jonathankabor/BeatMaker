@@ -1,4 +1,4 @@
-from audiostream.core import get_output
+from audiostream.audiostream.core import get_output
 
 from audio_source_mixer import AudioSourceMixer
 from audio_source_one_shot import AudioSourceOneShot
